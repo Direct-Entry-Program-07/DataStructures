@@ -38,7 +38,7 @@ public class Stack {
     }
 
     public void clear(){
-        for (int i = 0; i < array.length; i++) {
+        for (int i = 0; i < array.length-1; i++) {
             array[i] = 0;
         }
     }
@@ -49,7 +49,7 @@ public class Stack {
 
     public boolean contains(int number){
 
-        for (int i = 0; i < array.length; i++) {
+        for (int i = 0; i < array.length-1; i++) {
             if (array[i] == number){
                 return true;
             }else {
