@@ -16,11 +16,11 @@ public class Stack {
 
     public void pop(){
 
-        array[top] = 0;
+        array[top-1] = 0;
         if (top >0){
             top --;
         }else {
-            System.out.printf("Stack Overflow");
+            System.out.printf("Stack is empty now");
         }
 
     }
@@ -34,7 +34,7 @@ public class Stack {
     }
 
     public int peek(){
-        return top;
+        return array[top -1];
     }
 
     public void clear(){
