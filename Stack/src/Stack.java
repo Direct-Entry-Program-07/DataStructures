@@ -3,8 +3,6 @@ import java.util.Arrays;
 public class Stack {
 
     int top;
-    int last;
-    int peek;
     int array[];
 
     public Stack() {
@@ -17,12 +15,22 @@ public class Stack {
     }
 
     public void pop(){
+
         array[top] = 0;
-        top --;
+        if (top >0){
+            top --;
+        }else {
+            System.out.printf("Stack Overflow");
+        }
+
     }
 
     public boolean empty(){
-        return false;
+        if (array.equals(empty())){
+            return true;
+        }else {
+            return false;
+        }
     }
 
     public int peek(){
