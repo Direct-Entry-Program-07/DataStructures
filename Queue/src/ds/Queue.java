@@ -1,9 +1,23 @@
 package ds;
 
+import java.util.Arrays;
+
 public class Queue {
 
-    public void enQueue(int number){
+    private int array[];
 
+    public void enQueue(int number){
+        if(array == null){
+            array = new int[1];
+            array[0] = number;
+        }else {
+            int[] temp = new int[array.length + 1];
+            for (int i = 0; i < array.length; i++) {
+                temp[i] = array[i];
+            }
+            temp[temp.length - 1] = number;
+            array = temp;
+        }
     }
 
     public void deQueue(){
@@ -11,11 +25,12 @@ public class Queue {
     }
 
     public boolean empty(){
-        return false;
+        if (array == null) return true;
+        else return false;
     }
 
     public int peek(){
-        return 0;
+        return array[array.length -1];
     }
 
     public void clear(){
@@ -23,7 +38,7 @@ public class Queue {
     }
 
     public void print(){
-
+        System.out.println(Arrays.toString(array));
     }
 
     public boolean contains(int number){
