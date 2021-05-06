@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Stack {
 
     int top;
@@ -11,10 +13,12 @@ public class Stack {
 
     public void push(int number){
         array[top] = number;
+        top ++;
     }
 
     public void pop(){
-
+        array[top] = 0;
+        top --;
     }
 
     public boolean empty(){
@@ -22,7 +26,7 @@ public class Stack {
     }
 
     public int peek(){
-        return 0;
+        return top;
     }
 
     public void clear(){
@@ -30,12 +34,19 @@ public class Stack {
     }
 
     public void print(){
-
+        System.out.printf(Arrays.toString(array));
     }
 
     public boolean contains(int number){
+
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == number){
+                return true;
+            }else {
+                return false;
+            }
+        }
         return false;
     }
-
 
 }
