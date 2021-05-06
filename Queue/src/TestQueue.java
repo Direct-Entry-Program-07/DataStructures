@@ -11,7 +11,16 @@ public class TestQueue {
         queue.enQueue(30);
         queue.enQueue(40);
         queue.print();
-        System.out.println(queue.empty());
-        System.out.println(queue.peek());
+        queue.deQueue();
+        queue.print();
+        queue.deQueue();
+        queue.print();
+        queue.deQueue();
+        queue.print();
+        queue.deQueue();
+        queue.print();
+
+
+
     }
 }

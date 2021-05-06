@@ -21,7 +21,18 @@ public class Queue {
     }
 
     public void deQueue(){
-
+        if(array.length == 0){
+            System.out.println("Queue is empty");
+            return;
+        }else if (array.length == 1){
+            array = null;
+            return;
+        }
+        int temp[] = new int[array.length -1];
+        for (int i = 0; i < temp.length; i++) {
+            temp[i] = array[i];
+        }
+        array = temp;
     }
 
     public boolean empty(){
@@ -34,7 +45,7 @@ public class Queue {
     }
 
     public void clear(){
-
+        array = null;
     }
 
     public void print(){
@@ -42,10 +53,20 @@ public class Queue {
     }
 
     public boolean contains(int number){
-        return false;
+        if (array.length == 0){
+            System.out.println("Queue is empty");
+            return false;
+        }else {
+            for (int i = 0; i < array.length; i++) {
+                if (array[i] == number){
+                    return true;
+                }
+            }
+            return false;
+        }
     }
 
     public int size(){
-        return 0;
+        return empty() ? 0 : array.length;
     }
 }
