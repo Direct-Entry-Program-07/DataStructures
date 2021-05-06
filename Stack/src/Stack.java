@@ -1,7 +1,16 @@
 public class Stack {
 
-    public void push(int number){
+    int top;
+    int last;
+    int peek;
+    int array[];
 
+    public Stack() {
+        top = 0;
+    }
+
+    public void push(int number){
+        array[top] = number;
     }
 
     public void pop(){
