@@ -38,7 +38,9 @@ public class Stack {
     }
 
     public void clear(){
-
+        for (int i = 0; i < array.length; i++) {
+            array[i] = 0;
+        }
     }
 
     public void print(){
