@@ -21,7 +21,7 @@ public class Queue {
     }
 
     public void deQueue(){
-        if(array.length == 0){
+        if(array == null){
             System.out.println("Queue is empty");
             return;
         }else if (array.length == 1){
@@ -30,7 +30,7 @@ public class Queue {
         }
         int temp[] = new int[array.length -1];
         for (int i = 0; i < temp.length; i++) {
-            temp[i] = array[i];
+            temp[i] = array[i+1];
         }
         array = temp;
     }
@@ -41,6 +41,9 @@ public class Queue {
     }
 
     public int peek(){
+        if (array == null){
+            return 0;
+        }
         return array[array.length -1];
     }
 
@@ -49,6 +52,10 @@ public class Queue {
     }
 
     public void print(){
+        if (array == null){
+            System.out.println("Queue is Empty");
+            return;
+        }
         System.out.println(Arrays.toString(array));
     }
 
@@ -56,7 +63,7 @@ public class Queue {
         if (array.length == 0){
             System.out.println("Queue is empty");
             return false;
-        }else {
+        }else{
             for (int i = 0; i < array.length; i++) {
                 if (array[i] == number){
                     return true;
