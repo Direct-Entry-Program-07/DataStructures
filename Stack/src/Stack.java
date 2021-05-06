@@ -44,7 +44,7 @@ public class Stack {
     }
 
     public void print(){
-        System.out.printf(Arrays.toString(array));
+        System.out.print(Arrays.toString(array));
     }
 
     public boolean contains(int number){
