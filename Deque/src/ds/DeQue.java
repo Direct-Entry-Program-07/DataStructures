@@ -5,7 +5,7 @@ import java.util.Arrays;
 
 class Queue {
 
-    private int array[];
+    public int array[];
 
     public void enQueue(int number){
         if(array == null){
@@ -90,12 +90,16 @@ public class DeQue extends Queue{
     }
 
     public void enqueueRear(int number, int length){
-        this.length = length;
-        int[] temp = new int[length + 1];
-        for (int i = 0; i < ; i++) {
 
+        int temp[];
+        this.length = length;
+        if (array.length == length){
+            temp = new int[length + 1];
         }
-        temp[temp.length - 1] = number;
+        for (int i = 0; i < array.length; i++) {
+            temp[i+1] = array[i];
+        }
+        temp[0] = number;
         System.out.println(Arrays.toString(temp));
 
     }
