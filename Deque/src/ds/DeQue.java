@@ -81,8 +81,16 @@ class Queue {
 
 
 public class DeQue extends Queue{
+    int length;
+
+    DeQue(){
+        Queue queue = new Queue();
+        length = queue.size();
+        System.out.println(length);
+    }
 
     public void enqueueRear(int number){
+        int[] temp = new int[deq]
 
     }
 
