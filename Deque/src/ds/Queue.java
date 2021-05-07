@@ -2,7 +2,15 @@ package ds;
 
 public class Queue {
 
-    int[] numbers;
+    /*
+     *  Access Modifiers
+     *  1. public
+     *  2. private
+     *  3. protected = package-private + inheritance
+     *  4. package-private (default)
+     *
+     * */
+     int[] numbers;
 
     public void enqueue(int number){
         if (this.empty()){
