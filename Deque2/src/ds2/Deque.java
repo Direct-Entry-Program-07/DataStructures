@@ -1,4 +1,6 @@
-package ds;
+package ds2;
+
+import ds.Queue;
 
 public class Deque extends Queue{
 
