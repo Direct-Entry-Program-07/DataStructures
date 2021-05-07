@@ -52,11 +52,11 @@ public class DynamicArray {
 
             }
 
-            for (int j = index+1; j < numbers.length+1; j++) {
-                temp[j] = numbers[j-1];
+            for (int j = index; j < numbers.length-1; j++) {
+                temp[j] = numbers[j+1];
             }
             numbers = temp;
-            System.out.println();
+
         }
 
     }
@@ -70,7 +70,7 @@ public class DynamicArray {
     }
 
     public void clear(){
-
+        numbers = null;
     }
 
     public int size(){

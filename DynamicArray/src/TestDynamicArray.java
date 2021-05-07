@@ -4,6 +4,7 @@ public class TestDynamicArray {
 
     public static void main(String[] args) {
         DynamicArray dynamicArray = new DynamicArray();
+        dynamicArray.add(3, 100);
         dynamicArray.add(10);
         dynamicArray.add(20);
         dynamicArray.add(30);
@@ -15,6 +16,11 @@ public class TestDynamicArray {
         dynamicArray.add(4,35);
         dynamicArray.print();
         dynamicArray.add(60);
+        dynamicArray.print();
+        dynamicArray.remove(2);
+        dynamicArray.print();
+        System.out.println(dynamicArray.get(4));
+        dynamicArray.clear();
         dynamicArray.print();
     }
 
