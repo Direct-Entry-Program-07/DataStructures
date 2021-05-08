@@ -22,8 +22,8 @@ public class DynamicArray {
     }
 
     public void add(int index, int number){
-        if (this.empty()){
-            System.out.println("Array is Empty..");
+        if (index > size () || index <0){
+            throw new RuntimeException("Invalid array index.");
         }else{
             int[] temp = new int[numbers.length + 1];
 
@@ -42,6 +42,10 @@ public class DynamicArray {
     }
 
     public void remove(int index){
+        if (size() - 1 == 0){
+            clear();
+            return;
+        }
         if (this.empty()){
             System.out.println("Array is Empty..");
         }else{
@@ -62,6 +66,10 @@ public class DynamicArray {
     }
 
     public int get(int index){
+        if (index >= size() || index <0){
+            throw new RuntimeException("Invalid array index");
+        }
+
         return numbers[index];
     }
 
