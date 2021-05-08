@@ -6,6 +6,10 @@ public class Node {
     private String next;
     private int index;
 
+    public Node(int index) {
+        this.index = index;
+    }
+
     public int getIndex() {
         return index;
     }
@@ -14,7 +18,7 @@ public class Node {
         this.index = index;
     }
 
-    public int getData() {
+    public int getData(int index) {
         return data;
     }
 

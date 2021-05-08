@@ -10,10 +10,7 @@ public class TestSinglyLinkedList {
         sll.add(99);
         sll.add(37);
         sll.print();
-        /*sll.add(99);
-        sll.print();
-        sll.add(37);
-        sll.print();*/
+
     }
 
 

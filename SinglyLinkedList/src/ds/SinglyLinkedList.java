@@ -2,34 +2,21 @@ package ds;
 
 public class SinglyLinkedList {
 
-    int nodeCount = 0;
-    int index = 0;
-    Node firstNode = new Node();
-    Node nextNode = new Node();
-
-    public static void initialize(){
-
-    }
+    int index= 0;
+    Node node = new Node(index);
 
     public void add(int number){
+        if (index == 0){
+            node.setData(number);
+            System.out.println("Index: "+index+" Value "+ node.getData(index));
 
-        if (index == 0)
-        {
-            firstNode.setIndex(index);
-            firstNode.setData(number);
-            firstNode.setNext(nextNode.toString());
-            index++;
         }else {
-
-            nextNode.setIndex(index);
-            nextNode.setData(number);
-            nextNode.setNext(nextNode.toString());
-            index++;
+            Node node = new Node(index);
+            node.setData(number);
+            System.out.println("Index: "+index+" Value "+ node.getData(index));
 
         }
-
-
-       // System.out.println(node.getNext());
+        index++;
     }
 
     public void add(int index,int number){
@@ -45,18 +32,16 @@ public class SinglyLinkedList {
     }
 
     public void print(){
-        if (empty()){
-            System.out.println("[]");
-        }else {
 
+        System.out.println(node.getData(1));
 
-                System.out.print(firstNode.getData());
-                System.out.print(", ");
-                System.out.print(nextNode.getData());
-
-
+        /*System.out.print("[");
+        for (int i = 0; i <= index; i++) {
+           int temp =node.getData(i);
+            System.out.print(temp+" ,");
         }
-       // System.out.println(empty() ? "[]" : node.getData());
+        System.out.println("]");*/
+
     }
 
     public void clear(){
@@ -64,7 +49,7 @@ public class SinglyLinkedList {
     }
 
     public int size(){
-        return index;
+        return -1;
     }
 
     public boolean contains(int number){
@@ -72,11 +57,7 @@ public class SinglyLinkedList {
     }
 
     public boolean empty(){
-        if (index == 0){
-            return true;
-        }else {
-            return false;
-        }
+        return false;
 
     }
 }
