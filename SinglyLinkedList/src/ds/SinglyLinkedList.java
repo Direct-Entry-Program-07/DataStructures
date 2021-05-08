@@ -2,8 +2,18 @@ package ds;
 
 public class SinglyLinkedList {
 
+    int nodeCount = 0;
+
+    Node node = new Node(); //create the current node
+    Node nextNode = new Node(); //create the next node which pointed by the current node
+
     public void add(int number){
 
+        nodeCount++;
+        node.setData(number);
+        node.setNext(nextNode.toString());
+
+       // System.out.println(node.getNext());
     }
 
     public void add(int index,int number){
@@ -19,7 +29,13 @@ public class SinglyLinkedList {
     }
 
     public void print(){
-
+        if (empty()){
+            System.out.println("[]");
+        }else {
+            if (size())
+            System.out.print("["+node.getData()+"]");
+        }
+       // System.out.println(empty() ? "[]" : node.getData());
     }
 
     public void clear(){
@@ -27,7 +43,7 @@ public class SinglyLinkedList {
     }
 
     public int size(){
-        return -1;
+        return nodeCount;
     }
 
     public boolean contains(int number){
@@ -35,6 +51,11 @@ public class SinglyLinkedList {
     }
 
     public boolean empty(){
-        return false;
+        if (nodeCount == 0){
+            return true;
+        }else {
+            return false;
+        }
+
     }
 }
