@@ -3,15 +3,31 @@ package ds;
 public class SinglyLinkedList {
 
     int nodeCount = 0;
+    int index = 0;
+    Node firstNode = new Node();
+    Node nextNode = new Node();
 
-    Node node = new Node(); //create the current node
-    Node nextNode = new Node(); //create the next node which pointed by the current node
+    public static void initialize(){
+
+    }
 
     public void add(int number){
 
-        nodeCount++;
-        node.setData(number);
-        node.setNext(nextNode.toString());
+        if (index == 0)
+        {
+            firstNode.setIndex(index);
+            firstNode.setData(number);
+            firstNode.setNext(nextNode.toString());
+            index++;
+        }else {
+
+            nextNode.setIndex(index);
+            nextNode.setData(number);
+            nextNode.setNext(nextNode.toString());
+            index++;
+
+        }
+
 
        // System.out.println(node.getNext());
     }
@@ -32,8 +48,13 @@ public class SinglyLinkedList {
         if (empty()){
             System.out.println("[]");
         }else {
-            if (size())
-            System.out.print("["+node.getData()+"]");
+
+
+                System.out.print(firstNode.getData());
+                System.out.print(", ");
+                System.out.print(nextNode.getData());
+
+
         }
        // System.out.println(empty() ? "[]" : node.getData());
     }
@@ -43,7 +64,7 @@ public class SinglyLinkedList {
     }
 
     public int size(){
-        return nodeCount;
+        return index;
     }
 
     public boolean contains(int number){
@@ -51,7 +72,7 @@ public class SinglyLinkedList {
     }
 
     public boolean empty(){
-        if (nodeCount == 0){
+        if (index == 0){
             return true;
         }else {
             return false;
