@@ -9,6 +9,7 @@ public class TestSinglyLinkedList {
         sll.add(12);
         sll.add(99);
         sll.add(37);
+        sll.add(56);
         sll.print();
 
     }

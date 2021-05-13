@@ -2,21 +2,26 @@ package ds;
 
 public class SinglyLinkedList {
 
-    int index= 0;
-    Node node = new Node(index);
+    private Node first = null;
+    private Node last = null;
+    int count;
+
 
     public void add(int number){
-        if (index == 0){
-            node.setData(number);
-            System.out.println("Index: "+index+" Value "+ node.getData(index));
+
+        Node node = new Node(number);
+
+        if (first == null){
+            first = node;
+            last = node;
+            count++;
 
         }else {
-            Node node = new Node(index);
-            node.setData(number);
-            System.out.println("Index: "+index+" Value "+ node.getData(index));
-
+            last.setNext(node);
+            last = node;
+            count++;
         }
-        index++;
+
     }
 
     public void add(int index,int number){
@@ -33,14 +38,14 @@ public class SinglyLinkedList {
 
     public void print(){
 
-        System.out.println(node.getData(1));
+        Node temp = first;
 
-        /*System.out.print("[");
-        for (int i = 0; i <= index; i++) {
-           int temp =node.getData(i);
-            System.out.print(temp+" ,");
+        for (int i = 0; i < count; i++) {
+            if(temp != null){
+                System.out.println(temp.getValue());
+                temp = temp.getNext();
+            }
         }
-        System.out.println("]");*/
 
     }
 

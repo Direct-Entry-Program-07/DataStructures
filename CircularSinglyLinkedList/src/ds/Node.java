@@ -1,17 +1,14 @@
 package ds;
 
 public class Node {
-
     private int value;
     private Node next;
-    private int index;
 
     public Node() {
     }
 
     public Node(int value) {
         this.value = value;
-        this.next = null;
     }
 
     public int getValue() {
@@ -28,13 +25,5 @@ public class Node {
 
     public void setNext(Node next) {
         this.next = next;
-    }
-
-    public int getIndex() {
-        return index;
-    }
-
-    public void setIndex(int index) {
-        this.index = index;
     }
 }
